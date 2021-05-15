@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/blogSiteDB', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://paymate:' + process.env.MONGOPASSWORD + '@paymate.nxpho.mongodb.net/blogSiteDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const postSchema = new mongoose.Schema({
   title: String,
